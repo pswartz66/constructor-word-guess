@@ -28,7 +28,6 @@ class letterConstructor {
 
 
 var myletter = new letterConstructor('p', false);
-console.log(myletter);
 
 module.exports = letterConstructor;
 
