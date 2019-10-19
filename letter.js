@@ -5,7 +5,7 @@ class Letter {
 
     
     /**
-     * @param {string} letterChar - A string value to store an underlying character
+     * @param {string} letterChar - A string value to store an underlying letter
      * @param {boolean} isSearched - A boolean value that stores whether letterChar is true/false
      */
     constructor(letterChar) {
@@ -14,21 +14,23 @@ class Letter {
         this.letterChar = letterChar;
         this.isSearched = false;
 
+        this.underscore = '_';
+        
+
         /** @returns {boolean} displays a character or an underscore _ depending if the letter guessed exists or does not exist */
         this.displayCharacter = function() {
 
             if (this.isSearched) {
 
-                //console.log(this.letterChar);
+                console.log(this.letterChar);
+
                 return this.letterChar;
 
             } else {
 
-                var underscore = '_';
+                console.log(this.underscore);
 
-                //console.log(underscore);
-
-                return underscore;
+                return this.underscore;
 
             }
 
@@ -45,37 +47,22 @@ class Letter {
                 // flip prop isSearched to true if guess is correct
                 this.isSearched = true;
                 
-                console.log(this.isSearched);
 
             } else {
             
                 // keep prop isSearched as false if guess is incorrect
                 this.isSearched = false;
 
-                console.log(this.isSearched);
-
             
             }
 
-
-        }
-
-        this.printData = function () {
-
-            console.log("\n" + this.guessLetter +
-                        "\n" + this.isSearched);
+            console.log(this.isSearched);
+            return char;
 
         }
 
     }
 }
-
-
-var myletter = new Letter('p');
-
-myletter.displayCharacter();
-
-myletter.charCheck('k');
 
 
 
