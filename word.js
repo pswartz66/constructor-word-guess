@@ -13,32 +13,14 @@ class Word {
 
         this.wordToArray = [];
 
-        // this.str = str;
+        
+        this.wordToGuess = function () {
 
-        this.wordToGuess = function (char) {
-
-            for (var j = 0; j < this.wordOrPhrase.length; j++) {
-
-                var letterObj = new Letter(this.wordOrPhrase[j]);
-                
-                if (letterObj.charCheck(this.wordOrPhrase[j])) {
-
-                    letterObj.displayCharacter();
-
-                }
-
-
-                // this.wordOrPhrase[i] === letterObj.underscore;
-
-            
-            }
-
-            // return something;
+            console.log(this.wordToArray.join(' '));
 
         }
 
         this.guessLetter = function(char) {
-
 
             for (var i = 0; i < this.wordOrPhrase.length; i++) {
 
@@ -52,34 +34,25 @@ class Word {
 
                     this.wordToArray.push(' ');
 
-
                 } else if (letterObj.charCheck(char)) {
 
                     letterObj.displayCharacter();
 
                     this.wordToArray.push(letterObj.displayCharacter());
 
-
                 } 
-
 
             }
 
-            console.log(this.wordToArray.join(' '));
-
+            this.wordToGuess();
         }
 
     }
 
 }
 
-// in progress code
-// let randomWordOne = new Word(['t', 'h', 'i', 's', ' ', 'w', 'o', 'r', 'd']);
-// console.log(randomWordOne.wordToGuess('h'));
-
-
 
 // working code
  let randomWordTwo = new Word(['t', 'h', 'i', 's', ' ', 'w', 'o', 'r', 'd']);
 
- console.log(randomWordTwo.guessLetter('i'));
+ randomWordTwo.guessLetter('t');
