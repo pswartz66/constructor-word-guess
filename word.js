@@ -5,7 +5,7 @@ var Letter = require('./letter.js');
 class Word {
 
     /**
-    * @param {array} arr - Accepts an array of letters
+    * @param {string} arr - Accepts an array of letters
     */
     constructor(wordOrPhrase) {
 
@@ -53,6 +53,9 @@ class Word {
 
 
 // working code
- let randomWordTwo = new Word(['t', 'h', 'i', 's', ' ', 'w', 'o', 'r', 'd']);
+// let randomWordTwo = new Word(['t', 'e', 's', 't', ' ', 'w', 'o', 'r', 'd']);
 
- randomWordTwo.guessLetter('t');
+// randomWordTwo.guessLetter('t');
+
+
+ module.exports = Word;
