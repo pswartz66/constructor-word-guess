@@ -23,15 +23,23 @@ var playGame = function () {
 
 
         inquirer.prompt([
-            {
+            {   
+                type: 'input',
                 name: 'actionStatement',
                 message: 'Guess a letter! '
 
             }
-        ]).then(function (response) {
+        ]).then(function (inquirerResponse) {
+
+            var inquirerLetter = inquirerResponse.actionStatement;
+
+            console.log(wordObj.guessLetter(inquirerLetter));
 
 
+            // increment count by +1
             count++;
+
+            // call playGame function recursively
             playGame();
 
         }).then(function (err) {

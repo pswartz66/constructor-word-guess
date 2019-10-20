@@ -22,13 +22,13 @@ class Letter {
 
             if (this.isSearched) {
 
-                console.log(this.letterChar);
+                // console.log(this.letterChar);
 
                 return this.letterChar;
 
             } else {
 
-                console.log(this.underscore);
+                // console.log(this.underscore);
 
                 return this.underscore;
 
@@ -56,7 +56,7 @@ class Letter {
             
             }
 
-            console.log(this.isSearched);
+            // console.log(this.isSearched);
             return char;
 
         }

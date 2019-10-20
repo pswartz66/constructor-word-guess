@@ -13,7 +13,6 @@ class Word {
 
         this.wordToArray = [];
 
-        
         this.wordToGuess = function () {
 
             console.log(this.wordToArray.join(' '));
@@ -45,6 +44,9 @@ class Word {
             }
 
             this.wordToGuess();
+
+            this.wordToArray = [];
+
         }
 
     }
