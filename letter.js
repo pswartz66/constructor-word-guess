@@ -10,8 +10,8 @@ class Letter {
      */
     constructor(letterChar) {
 
-        
         this.letterChar = letterChar;
+
         this.isSearched = false;
 
         this.underscore = '_';
@@ -57,6 +57,9 @@ class Letter {
             }
 
             // console.log(this.isSearched);
+
+            this.displayCharacter();
+
             return char;
 
         }

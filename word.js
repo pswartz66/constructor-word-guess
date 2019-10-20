@@ -35,7 +35,7 @@ class Word {
 
                 } else if (letterObj.charCheck(char)) {
 
-                    letterObj.displayCharacter();
+                    // letterObj.displayCharacter();
 
                     this.wordToArray.push(letterObj.displayCharacter());
 
@@ -45,7 +45,7 @@ class Word {
 
             this.wordToGuess();
 
-            this.wordToArray = [];
+            // this.wordToArray = [];
 
         }
 

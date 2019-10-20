@@ -29,7 +29,12 @@ var playGame = function () {
                 message: 'Guess a letter! '
 
             }
-        ]).then(function (inquirerResponse) {
+        ]).then(function (inquirerResponse, err) {
+
+            if (err) {
+                throw err;
+            }
+
 
             var inquirerLetter = inquirerResponse.actionStatement;
 
@@ -42,13 +47,6 @@ var playGame = function () {
             // call playGame function recursively
             playGame();
 
-        }).then(function (err) {
-
-            if (err) {
-
-                throw err;
-
-            }
         })
 
     } else {
