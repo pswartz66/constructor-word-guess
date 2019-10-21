@@ -33,6 +33,11 @@ class Word {
 
                     this.wordToArray.push(' ');
 
+                } else if (this.wordToArray.includes(this.wordOrPhrase[i])) {
+
+                    console.log('already includes the letter');
+
+
                 } else if (letterObj.charCheck(char)) {
 
                     // letterObj.displayCharacter();
