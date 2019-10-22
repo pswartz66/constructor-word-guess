@@ -9,6 +9,11 @@ var randomWord = require('./node_modules/random-words');
 // store a random word in the Word class
 var wordObj = new Word(randomWord());
 
+let guessedLettersArr = [];
+let correctGuesses = [];
+let incorrectGuesses = [];
+
+
 console.log(wordObj.wordOrPhrase);
 
 var wordLength = wordObj.wordOrPhrase.length;
@@ -25,21 +30,35 @@ var playGame = function () {
         inquirer.prompt([
             {   
                 type: 'input',
-                name: 'actionStatement',
+                name: 'userInput',
                 message: 'Guess a letter! '
 
             }
         ]).then(function (inquirerResponse, err) {
 
             if (err) {
+
                 throw err;
+
+            }
+
+            var inquirerLetter = inquirerResponse.userInput;
+
+            if (!guessedLettersArr.includes(inquirerLetter)) {
+
+                guessedLettersArr.push(inquirerLetter);
+
+                console.log(guessedLettersArr);
+
             }
 
 
-            var inquirerLetter = inquirerResponse.actionStatement;
+
+
 
             console.log(wordObj.guessLetter(inquirerLetter));
 
+            // console.log(guessedLettersArr);
 
             // increment count by +1
             count++;

@@ -3,7 +3,6 @@
 /** Constructor Class */
 class Letter {
 
-    
     /**
      * @param {string} letterChar - A string value to store an underlying letter
      * @param {boolean} isSearched - A boolean value that stores whether letterChar is true/false
@@ -53,12 +52,11 @@ class Letter {
                 // keep prop isSearched as false if guess is incorrect
                 this.isSearched = false;
 
-            
             }
 
             // console.log(this.isSearched);
 
-            this.displayCharacter();
+            // this.displayCharacter();
 
             return char;
 
@@ -66,7 +64,6 @@ class Letter {
 
     }
 }
-
 
 
 // export Letter object

@@ -13,6 +13,18 @@ class Word {
 
         this.wordToArray = [];
 
+
+        for (var i = 0; i < wordOrPhrase.length; i++) {
+
+            var letterObj = new Letter(this.wordOrPhrase[i]);
+
+            this.wordToArray.push(letterObj);
+
+            // console.log(this.wordToArray[i].letterChar);
+
+        };
+
+
         this.wordToGuess = function () {
 
             console.log(this.wordToArray.join(' '));
@@ -21,34 +33,25 @@ class Word {
 
         this.guessLetter = function(char) {
 
-            for (var i = 0; i < this.wordOrPhrase.length; i++) {
+            for (var i = 0; i < this.wordToArray.length; i++) {
 
                 // instantize Letter class
-                var letterObj = new Letter(this.wordOrPhrase[i]);
+                
 
                 // must be called before charCheck function 
                 // since charCheck function will always return
                 // a true or false statement
-                if (this.wordOrPhrase[i] == ' ') {
 
-                    this.wordToArray.push(' ');
+                this.wordToArray[i].charCheck(char);
 
-                } else if (this.wordToArray.includes(this.wordOrPhrase[i])) {
-
-                    console.log('already includes the letter');
-
-
-                } else if (letterObj.charCheck(char)) {
-
-                    // letterObj.displayCharacter();
-
-                    this.wordToArray.push(letterObj.displayCharacter());
-
-                } 
+                // console.log(this.wordToArray);
 
             }
 
+
             this.wordToGuess();
+
+            // console.log(arr);
 
             // this.wordToArray = [];
 
